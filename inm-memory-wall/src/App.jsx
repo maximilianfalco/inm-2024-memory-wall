@@ -1,35 +1,68 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import KUTE from 'kute.js'
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          The current count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+function App() {
+	const [count, setCount] = useState(0)
+
+	const svgPaths = [
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+		'',
+	]
+
+	const tween = KUTE.fromTo(
+		'#blob0', 
+		{ path: 'M120.6 -125.6C146.9 -94.3 152.5 -47.1 149.1 -3.4C145.6 40.3 133.3 80.6 106.9 122.1C80.6 163.6 40.3 206.3 0.9 205.4C-38.4 204.4 -76.8 159.8 -101.8 118.3C-126.8 76.8 -138.4 38.4 -154.6 -16.1C-170.7 -70.7 -191.4 -141.4 -166.4 -172.8C-141.4 -204.1 -70.7 -196 -11.8 -184.3C47.1 -172.5 94.3 -156.9 120.6 -125.6'},
+		{ path: 'M175.5 -175.7C225.2 -125.9 261.6 -62.9 265.5 3.9C269.4 70.7 240.8 141.4 191.1 166.4C141.4 191.4 70.7 170.7 16.6 154.1C-37.5 137.5 -75 125 -122.6 100C-170.3 75 -228.1 37.5 -241 -12.8C-253.8 -63.2 -221.7 -126.3 -174 -176.2C-126.3 -226 -63.2 -262.5 -0.1 -262.4C62.9 -262.3 125.9 -225.5 175.5 -175.7'},
+		{ repeat: 100, duration: 3000, yoyo: true}
+	)
+
+	tween.start();
+
+	return (
+		<>
+			{/* <div className="card">
+				<button onClick={() => setCount((count) => count + 1)}>
+					The current count is {count}
+				</button>
+			</div> */}
+			{/* Blob */}
+			<section>
+				<svg 
+					id="visual" 
+					viewBox="0 0 900 600" 
+					width="900" 
+					height="600" 
+					version="1.1"
+				>
+					<g transform="translate(464.0168995955081 294.64325196780436)">
+						<path id='blob0' 
+							d="M120.6 -125.6C146.9 -94.3 152.5 -47.1 149.1 -3.4C145.6 40.3 133.3 80.6 106.9 122.1C80.6 163.6 40.3 206.3 0.9 205.4C-38.4 204.4 -76.8 159.8 -101.8 118.3C-126.8 76.8 -138.4 38.4 -154.6 -16.1C-170.7 -70.7 -191.4 -141.4 -166.4 -172.8C-141.4 -204.1 -70.7 -196 -11.8 -184.3C47.1 -172.5 94.3 -156.9 120.6 -125.6" 
+							fill="none" 
+							stroke="#FFFFFF" 
+							strokeWidth="25"
+						></path>
+					</g>
+					<g transform="translate(464.0168995955081 294.64325196780436)">
+						<path id='blob1' 
+							d="M175.5 -175.7C225.2 -125.9 261.6 -62.9 265.5 3.9C269.4 70.7 240.8 141.4 191.1 166.4C141.4 191.4 70.7 170.7 16.6 154.1C-37.5 137.5 -75 125 -122.6 100C-170.3 75 -228.1 37.5 -241 -12.8C-253.8 -63.2 -221.7 -126.3 -174 -176.2C-126.3 -226 -63.2 -262.5 -0.1 -262.4C62.9 -262.3 125.9 -225.5 175.5 -175.7" 
+							fill="none" 
+							stroke="#FFFFFF" 
+							strokeWidth="25"
+						></path>
+					</g>
+				</svg>
+			</section>
+		</>
+	)
 }
 
 export default App
