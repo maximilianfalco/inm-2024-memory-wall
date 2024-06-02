@@ -4,8 +4,8 @@ import { Box } from '@mui/material'
 const FractalGradientBg = () => {
   return (
     <Box id='main-bg' sx={{
-      width: '100vw',
-      height: '100vh',
+      width: '100%',
+      height: '100%',
       position: 'absolute',
       overflow: 'hidden',
     }}>
