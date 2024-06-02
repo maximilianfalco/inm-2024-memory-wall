@@ -6,3 +6,7 @@ This memory wall aims to provide participants of the Indonesian Night Market (IN
 [Indonesian Nigth Market Instagram](https://www.instagram.com/inm.unsw/?hl=en)
 
 [PPIA UNSW Instagram Page](https://www.instagram.com/ppiaunsw/?hl=en)
+
+Specifications:
+- Built using Vite + React
+
