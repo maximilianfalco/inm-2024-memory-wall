@@ -145,3 +145,8 @@ button:focus-visible {
   animation: moveInCircle 20s ease infinite;
   opacity: 1;
 }
+
+@font-face {
+  font-family: 'FloatingText';
+  src: url(./assets/fonts/Higuen\ Serif.otf);
+}

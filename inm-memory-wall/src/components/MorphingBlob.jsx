@@ -24,7 +24,7 @@ const MorphingBlob = () => {
 		{ repeat: 90, duration: 7500, yoyo: true}
 	).start();
 
-	tween.start();
+	// tween.start();
 
   return (
     <Box sx={{ position: 'fixed'	}}>

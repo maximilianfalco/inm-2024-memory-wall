@@ -9,7 +9,7 @@ const FractalGradientBg = () => {
       position: 'absolute',
       overflow: 'hidden',
     }}>
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg>
 				<defs>
 					<filter id="goo">
 						<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
