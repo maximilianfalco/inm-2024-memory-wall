@@ -48,7 +48,6 @@ const MovingCircle = (props) => {
         animation: `${animation} ${animationDuration}s ${reverse} infinite`,
         transformOrigin: `calc(50% - ${offset}px)`,
         opacity: 1,
-        // border: 1,
       }}
     >
       
