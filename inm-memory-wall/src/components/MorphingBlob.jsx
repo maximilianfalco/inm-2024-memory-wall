@@ -24,8 +24,6 @@ const MorphingBlob = () => {
 		{ repeat: 90, duration: 7500, yoyo: true}
 	).start();
 
-	// tween.start();
-
   return (
     <Box sx={{ position: 'fixed'	}}>
 			<svg id="visual" viewBox="0 0 1200 600" width="100%" height="700" version="1.1">

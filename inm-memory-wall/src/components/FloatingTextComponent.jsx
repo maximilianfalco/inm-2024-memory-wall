@@ -4,11 +4,6 @@ import { DvdScreensaver } from 'react-dvd-screensaver'
 import { useState } from 'react';
 
 const FloatingTextComponent = (props) => {
-  /**
-   * Need to make randomiser for speed of text, maybe from 0 - 0.5 sounds goods
-   * Implement latest by today (6/4/2024)
-   */
-
   const [opacity, setOpacity] = useState(0);
   useEffect(() => {
     const opacity = Math.random();
@@ -26,7 +21,6 @@ const FloatingTextComponent = (props) => {
           width: 'fit-content',
           color: 'black',
           fontSize: '1.5em',
-          // fontFamily: 'Higuen Serif'
         }}>
           {props.text}
         </Typography>
