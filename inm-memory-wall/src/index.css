@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Higuen';
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,10 @@
 
   --bright-yellow: 254,248,174;
   --blending: hard-light;
+}
+
+body {
+  font-family: Higuen;
 }
 
 button {
@@ -27,10 +31,6 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 #main-bg {
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
@@ -41,9 +41,6 @@ button:focus-visible {
 @keyframes moveInCircle {
   0% {
     transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
   }
   100% {
     transform: rotate(360deg);
@@ -115,7 +112,7 @@ button:focus-visible {
   transform-origin: calc(50% - 800px) calc(50% + 200px);
 }
 
-#circle6{
+#circle6 {
   mix-blend-mode: var(--blending);
   top: calc(50% - var(--circle-size) / 2);
   left: calc(50% - var(--circle-size) / 2);
@@ -123,6 +120,6 @@ button:focus-visible {
 }
 
 @font-face {
-  font-family: 'FloatingText';
-  src: url(./assets/fonts/Higuen\ Serif.otf);
+  font-family: 'Higuen';
+  src: url(/inm-memory-wall/src/assets/fonts/Higuen.otf);
 }

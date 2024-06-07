@@ -1,24 +1,35 @@
 import './App.css'
-import { Box } from '@mui/material'
+import { Box, ThemeProvider, createTheme } from '@mui/material'
 
 import FractalGradientBg from './components/FractalGradientBg'
-import { DvdScreensaver } from 'react-dvd-screensaver'
-import MorphingBlob from './components/MorphingBlob'
 import FloatingTextContainer from './components/FloatingTextContainer'
+
+import Higuen from './assets/fonts/Higuen.otf'
+
+const theme =	createTheme({
+	typography: {
+		fontFamily: 'Higuen'
+	},
+	components: {
+		MuiCssBaseline: {
+			styleOverrides: `
+				@font-face {
+					font-family: 'Higuen',
+					src: local('Higuen'), url(${Higuen}) format(otf);
+				}
+			`,
+		}
+	}
+})
 
 function App() {
 	return (
-		<Box sx={{ display: 'flex' }}>
-			<FractalGradientBg/>
-			{/* <Box sx={{
-        filter: 'url(#goo) blur(20px)',
-        width: '100%',
-        height: '100%',
-      }}>
-				<MorphingBlob/>
-			</Box> */}
-			<FloatingTextContainer/>
-		</Box>
+		<ThemeProvider theme={theme}>
+			<Box sx={{ display: 'flex' }}>
+				<FractalGradientBg/>
+				<FloatingTextContainer/>
+			</Box>
+		</ThemeProvider>
 	)
 }
 

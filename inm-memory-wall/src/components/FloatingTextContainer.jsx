@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Box, IconButton, TextField } from '@mui/material'
+import { Box, IconButton, TextField, Snackbar } from '@mui/material'
 import FloatingTextComponent from './FloatingTextComponent'
 import useStateRef from 'react-usestateref'
 import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded';
@@ -48,11 +48,29 @@ const FloatingTextContainer = () => {
     }
   }, []);
 
+  const removeRecent = () => {
+    const floatingTexts = texts;
+    floatingTexts.pop();
+    setTexts(floatingTexts);
+    openSnackBar();
+  }
+  const [open, setOpen] = useState(false)
+  const openSnackBar = () => {
+    setOpen(true);
+  };
+  const closeSnackBar = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   /**
    * Style Constants
    */
   const inputStyles = {
-    style: {fontFamily: 'FloatingText', fontSize: '30px', color: '#FFFFE4'}
+    style: {fontFamily: 'Higuen', fontSize: '30px', color: '#FFFFE4'}
   }
 
   return (
@@ -84,6 +102,7 @@ const FloatingTextContainer = () => {
           sx={{
             position:'relative',
             zIndex: 2,
+            fontFamily: 'Higuen',
             "& fieldset": { border: 'none' },
           }}
           autoFocus={true}
@@ -91,14 +110,17 @@ const FloatingTextContainer = () => {
           >
         </TextField>
       </Box>
-      <Box sx={{
-        position: 'fixed',
-        zIndex: 9000000
-      }}>
-        <IconButton>
+      <Box sx={{ position: 'fixed', zIndex: 9000000 }}>
+        <IconButton onClick={() => {removeRecent()}}>
           <ReplayRoundedIcon/>
         </IconButton>
       </Box>
+      <Snackbar
+        open={open}
+        autoHideDuration={1000}
+        onClose={closeSnackBar}
+        message="Message Deleted"
+      />
 		</Box>
   )
 }

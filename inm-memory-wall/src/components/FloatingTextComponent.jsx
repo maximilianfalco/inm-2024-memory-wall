@@ -25,8 +25,8 @@ const FloatingTextComponent = (props) => {
         <Typography sx={{ 
           width: 'fit-content',
           color: 'black',
-          fontSize: '24px',
-          fontFamily: 'FloatingText'
+          fontSize: '1.5em',
+          // fontFamily: 'Higuen Serif'
         }}>
           {props.text}
         </Typography>
