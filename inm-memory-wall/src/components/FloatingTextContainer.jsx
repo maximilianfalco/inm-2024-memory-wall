@@ -70,7 +70,7 @@ const FloatingTextContainer = () => {
    * Style Constants
    */
   const inputStyles = {
-    style: {fontFamily: 'Higuen', fontSize: '30px', color: '#FFFFE4'}
+    style: {fontFamily: 'Higuen', fontSize: '30px', color: '#FFFFE4', lineHeight: '50px'}
   }
 
   return (

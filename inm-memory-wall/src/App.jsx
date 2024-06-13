@@ -39,10 +39,10 @@ function App() {
 						left: '5px',
 						backgroundColor: 'transparent',
 						width: 'fit-content',
-						opacity: 0.75, 
+						opacity: 0.55, 
 						'&:hover': {
 							backgroundColor: 'transparent',
-							opacity: 0.95, 	
+							opacity: 0.85, 	
 						}
 					}}
 				>
